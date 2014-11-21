@@ -1,0 +1,304 @@
+@import 'nib'
+@import 'normalize.styl'
+@import 'styleFont.styl'
+@import 'styleIcomoon.styl'
+
+
+grisClaro = #6F6F6F
+grisOscuro =  #332F2F
+grisMasOscuro = #818181
+fucsia = #BD255B
+fondo = #f0f0f0f0
+
+html 
+	color: grisOscuro
+	
+.u-displaynone
+	display none
+	
+.u-title1
+	margin:0
+	font-weight: 400
+	font-size: 1.2rem
+	color: grisOscuro
+	
+.u-title2
+	margin: 0
+	color: grisClaro
+	font-weight: 400
+	font-size 0.9rem
+	
+.u-icon
+	text-decoration: none
+	margin: 0 0.4em 
+	font-size: 1.2em
+	line-height: 3.2rem
+	
+.u-display
+	display inline-block
+	
+.u-image
+	vertical-align top
+	width: 100%
+.u-iconForm
+	text-decoration none
+	color grisMasOscuro
+	position absolute
+.Header
+	position: relative
+	text-align: center
+	border-bottom: 1.5px solid grisClaro
+	height: 3.2em
+	
+.Header-options
+	color: grisOscuro
+	text-decoration: none
+	font-size: 1.2em
+	position: absolute
+	left: 1em
+	top: 16px
+
+.Header-title
+	font-size: 1.4em
+	font-weight: 400
+	margin: 0
+	line-height: 3.2rem
+
+.SectionPrincipal
+	text-align: center
+	
+.Playlist
+	max-width 520px
+	margin: 0 auto
+	
+.Playlist-imageContainer
+	position relative
+	margin 0
+		
+.Playlist-love
+	text-align: right
+	height 3.2em
+	position absolute
+	left 0
+	right 0
+	bottom 0
+	background-color: rgba(51,47,47,0.5)
+
+.Playlist-iconLove
+	color: white
+	&:last-child
+		margin-right: 1em
+
+.Playlist-content
+	padding 1em
+	
+.Playlist-containerBarrita
+	width: 70%
+	margin-bottom: 2.5px
+	height 5px
+	border-radius: 2.5px
+	background-color: grisMasOscuro
+
+.Playlist-barrita
+	position relative
+	border-radius: 2.5px
+	width:30%;
+	height: 5px
+	background-color: fucsia
+	animation: progreso 8s  infinite linear
+@keyframes progreso
+	0%
+		width:0%
+	100%
+		width:100%
+	
+.Playlist-circle
+	background-color: grisOscuro
+	position absolute
+	right:0
+	top:-5px
+	width 15px
+	height 15px
+	border-radius 50%
+	animation-name: bolita
+	animation-duration:1s
+	animation-iteration-count:infinite
+
+@keyframes bolita
+	0%
+		top: -5px
+		opacity 1
+		width 15px
+		height 15px
+	100%
+		opacity 0
+		top: -10px
+		width 25px
+		height 25px
+
+
+.Playlist-title2
+	margin: 0 1em
+	padding: 0.5em 5em
+	border-bottom: 2px solid grisClaro
+
+.Playlist-contentIcon
+	margin: 0
+
+.Playlist-icon
+	color: grisClaro
+	
+.Playlist-inicio,
+.Playlist-termino
+	color:grisOscuro
+
+.Section
+	padding: 0.5rem
+	font-size: 0 
+	text-align: center
+	
+.Section-article
+	text-align: left
+	margin: 0.5rem 0.45rem
+	display: inline-block
+	
+.Section-imageConteiner
+	width: 128px
+	margin 0
+	
+.Section-title1
+	padding-top:0.2rem
+
+.Section-link1
+.Section-link2
+	text-decoration: none
+	
+.Header-logoContainer
+	width 122px
+	margin-top 1.2em
+	
+	
+.Playlist-navegacion
+	margin 0
+	
+.Playlist-lista
+	text-align left
+	font-size 0
+	width auto
+	margin 0
+	padding 0
+	
+.Playlist-item
+	font-size 1rem
+	display inline-block
+	list-style none
+	
+.Playlist-ancle
+	border-top:4px solid transparent
+	display block
+	padding 0.8em 1em   1em 1em
+	text-decoration none
+	color grisOscuro
+	transition:0.3s border linear
+	&:hover
+		border-top:4px solid grisMasOscuro
+.Header-dateContent
+
+	height 5.4rem
+	padding-top 1em
+	text-align right
+.Header-avatarContainer
+	margin 0
+	border-radius 50%
+	width 38px
+	overflow hidden
+.Header-avatarContainer
+	
+	position relative
+	top 15px
+.Header-text
+	border 1.5px solid grisMasOscuro
+	border-radius 5px
+	padding 0.3em 2em
+
+.Header-formContend
+	
+	position relative
+
+.Header-formIcon1
+	left 8px	
+	top 7px
+.Header-formIcon2
+	right 8px
+	top 7px
+	
+.Header-formContend
+.Header-avatarContainer
+.Header-name
+	margin 0 0.2em
+	display inline-block
+
+.ListMusic
+	margin-left 3em
+	padding-left 2em
+	text-align left
+	width 350px;
+	border-left: 1.5px solid grisMasOscuro
+.ListMusic-item
+	margin 2em 0 1.6em 0
+	border-bottom 1.5px solid grisMasOscuro
+.ListMusic-icon
+	color grisMasOscuro
+	float right
+	line-height 1.5em
+	font-size 0.9em
+.Header-divWrap
+
+	border-bottom 1.5px solid grisMasOscuro
+	
+@media screen and (min-width:1000px)
+	.Header-options
+	.Header-title
+		display: none
+	
+	.Header
+		height 9.6rem
+		border-bottom: none
+		
+	.Header-dateContent
+	.Playlist-navegacion
+		display block
+	.Header-logoContainer
+		display block
+		float left
+	.Playlist
+	.ListMusic
+		vertical-align top
+		display inline-block
+	.wrap 
+		margin 0 auto
+		width 1000px
+
+	
+// .Header-form
+// 	line-height 5em
+// 	padding 0em 4em 0 0
+// 	text-align right
+// .Header-text
+// 	border-radius 3px
+// 	padding:0.4em 0  0.4em 1.5em
+// 	border: 1px solid grisOscuro
+
+	
+
+	
+
+		
+
+
+
+
+
+
+		
+
